@@ -10,7 +10,7 @@ public class SelectionSort extends AbstractSort {
                     min = j;
                 }
             }
-            exch(a, i, min);
+            exchange(a, i, min);
         }
     }
 
