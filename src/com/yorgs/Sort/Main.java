@@ -38,6 +38,16 @@ public class Main {
         System.out.println("Is Sorted? " + isSorted(myArray) + "\n");
         //printArray(myArray);
 
+        System.out.println("\nMergeSort:");
+        myArray = originalArray.clone();
+        startTime = System.nanoTime();
+        MergeSort.sort(myArray);
+        endTime = System.nanoTime();
+        totalTime = endTime - startTime;
+        System.out.println("Elapsed Time:" + totalTime);
+        System.out.println("Is Sorted? " + isSorted(myArray) + "\n");
+        //printArray(myArray);
+
     }
 
     public static boolean isSorted(Double[] a){
