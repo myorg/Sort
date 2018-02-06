@@ -8,7 +8,7 @@ public class Main {
         long startTime;
         long endTime;
         long totalTime;
-        int arraySize = 10000;
+        int arraySize = 100000;
         Double[] originalArray = new Double[arraySize];
         Double[] myArray;
         System.out.println("Unsorted Array:");
@@ -42,6 +42,16 @@ public class Main {
         myArray = originalArray.clone();
         startTime = System.nanoTime();
         MergeSort.sort(myArray);
+        endTime = System.nanoTime();
+        totalTime = endTime - startTime;
+        System.out.println("Elapsed Time:" + totalTime);
+        System.out.println("Is Sorted? " + isSorted(myArray) + "\n");
+        //printArray(myArray);
+
+        System.out.println("\nQuickSort:");
+        myArray = originalArray.clone();
+        startTime = System.nanoTime();
+        QuickSort.sort(myArray);
         endTime = System.nanoTime();
         totalTime = endTime - startTime;
         System.out.println("Elapsed Time:" + totalTime);
